@@ -1,98 +1,49 @@
+//   exercise 1 JS
 
-/* Exercise 1 CSS */
-
-#square {
-    height: 200px;
-    width: 200px;
-    background-color: rgb(41, 182, 123);
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin-top: 100px;
-    left: 40%;
-    vertical-align: middle;
-    align-items: center;
-    gap: 10px;
-
+function alertBox() {
+    // Getting the informations about the element
+    const squareStyle = getComputedStyle(document.getElementById("square"))
+    const textColor = squareStyle.color;
+    const backgroundColor = squareStyle.backgroundColor;
+    const height = squareStyle.height;
+    const width = squareStyle.width;
+    const className = ''
+    const fontFamily = squareStyle.fontFamily;
+    const fontSize = squareStyle.fontSize;
+  
+    // the message to display in the alert dialog box
+    const message =
+      "Text color: " + textColor + "\n" +
+      "Background color: " + backgroundColor + "\n" +
+      "Height: " + height + "\n" +
+      "Width: " + width + "\n" +
+      "Class: " + document.getElementById("square").className + "\n" +
+      "Font: " + fontFamily + "\n" +
+      "Size: " + fontSize;
+  
+    // Display the message in an alert dialog box
+    alert(message);
+  
+    
 }
+// exercise 2
 
-.text {
-    justify-content: center;
-    position: absolute;
-    vertical-align: middle;
-    display: flex;
-    flex-direction: column;
-}
+    //By clicking on any of the top squares, the bottom square takes on its color and the color code of the selected square is displayed.
+    // Get all the top squares
+    const line1 = document.querySelectorAll('.squarebox');
 
-h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: xx-large;
-    color: azure;
-    text-align: center;
-}
+    // Get the bottom square
+    const selection = document.querySelector('.selection');
 
-h1:hover {
-    color: rgb(141, 93, 4);
-}
+    // Add click event listeners to each top square
+    line1.forEach((squarebox) => {
+        squarebox.addEventListener('click', () => {
+            // Change the color of the bottom square to match the clicked top square
+            const colorCode = getComputedStyle(squarebox).getPropertyValue('background-color');
+            selection.style.backgroundColor = colorCode;
+            
+            // Display the color code of the selected square
+            // console.log(colorCode);
 
-
-/* Exercise 2 CSS */
-
-.line1 {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin-top: 100px;
-    vertical-align: middle;
-    align-items: center;
-    gap: 10px;
-}
-
-.squarebox {
-    height: 200px;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    vertical-align: middle;
-    align-items: center;
-}
-
-
-.line1 {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin-top: 100px;
-    vertical-align: middle;
-    align-items: center;
-    margin-top: 100px;
-}
-
-.line2 {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    vertical-align: middle;
-    align-items: center;
-    margin-top: 10px}
-
-.one {
-    background-color: red;
-}
-
-.two {
-    background-color: blue;
-}
-
-.three {
-    background-color: green;
-}       
-
-.four {       
-    background-color: yellow;   
-}   
-
-.selection {
-    background-color: red;
-}
+        });
+});
