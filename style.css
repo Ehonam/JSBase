@@ -1,8 +1,10 @@
 
+/* Exercise 1 CSS */
+
 #square {
     height: 200px;
     width: 200px;
-    background-color: rgb(22, 199, 140);
+    background-color: rgb(41, 182, 123);
     display: flex;
     justify-content: center;
     position: relative;
@@ -10,6 +12,8 @@
     left: 40%;
     vertical-align: middle;
     align-items: center;
+    gap: 10px;
+
 }
 
 .text {
@@ -28,5 +32,67 @@ h1 {
 }
 
 h1:hover {
-    color: rgb(192, 128, 9);
+    color: rgb(141, 93, 4);
+}
+
+
+/* Exercise 2 CSS */
+
+.line1 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 100px;
+    vertical-align: middle;
+    align-items: center;
+    gap: 10px;
+}
+
+.squarebox {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    vertical-align: middle;
+    align-items: center;
+}
+
+
+.line1 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 100px;
+    vertical-align: middle;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.line2 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    vertical-align: middle;
+    align-items: center;
+    margin-top: 10px}
+
+.one {
+    background-color: red;
+}
+
+.two {
+    background-color: blue;
+}
+
+.three {
+    background-color: green;
+}       
+
+.four {       
+    background-color: yellow;   
+}   
+
+.selection {
+    background-color: red;
 }
