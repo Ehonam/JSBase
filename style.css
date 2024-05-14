@@ -117,4 +117,46 @@ h4 {
     margin-top: 100px;
 }
 
+ 
+
 /* Exercise 4 CSS */
+
+#socialmedia {
+    margin-top: 100px;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.follow {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    vertical-align: middle;
+    align-items: center;
+    gap: 10px;
+    margin: 10px
+}
+
+#mediasquares {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    vertical-align: middle;
+    align-items: center;
+    gap: 20px;   
+}
+
+.mediasquare {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    vertical-align: middle;
+    align-items: center;
+    transition: all 1s ease;
+}
