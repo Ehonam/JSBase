@@ -10,11 +10,15 @@
 </head>
 <body>
         <!-- Exercice 1 -->
+        <h2>Exercice 1</h2>
+
     <div id="square" onclick="alertBox()" class="hello">
         <span><h1><center>Hallo :D</h1></center></span>
     </div>
         <!-- Exercice 2 -->
-    <div id="squareboxes">
+        <h2>Exercice 2</h2>
+
+    <div id="squareboxes" onclick="backgroundColor()">
         <div class="line1">
             <div class="squarebox one"></div>
             <div class="squarebox two"></div>
@@ -28,26 +32,47 @@
         </div>
     </div>
         <!-- Exercice 3 -->
+        <h2>Exercice 3</h2>
+
     <div id="foursquares">
         <div class="line1">
-            <div class="hello" onclick="toggleSquare(this)">
+            <div class="hello shrunken" onclick="toggleSquare(this)">
                 <span><h4><center>1</h4></center></span>
             </div>
-            <div class="hello" onclick="toggleSquare(this)">
+            <div class="hello shrunken" onclick="toggleSquare(this)"> <!-- onclick="toggleSquare(this)" -->
                 <span><h4><center>2</h4></center></span>
             </div>
         </div>
         <div class="line1">
-            <div class="hello" onclick="toggleSquare(this)">
+            <div class="hello shrunken" onclick="toggleSquare(this)"> <!-- onclick="toggleSquare(this)" -->
                 <span><h4><center>3</h4></center></span>
             </div>
-            <div class="hello" onclick="toggleSquare(this)">
+            <div class="hello shrunken" onclick="toggleSquare(this)"> <!-- onclick="toggleSquare(this)" -->
                 <span><h4><center>4</h4></center></span>
             </div>
         </div>
     </div>
 
-            <!-- Exercice 4 -->
+        <!-- Exercice 4 -->
+        <h2>Exercice 4</h2>
+
+        <div id="socialmedia">
+            <span class="follow"><h1><center>Follow Us</h1></center></span><br>
+            <div id="mediasquares">
+                <div class="mediasquare facebook">
+                    <div class="logo"><i class="fa-brands fa-facebook"></i></div>
+                    <span class="logotext"><h5>Facebook</h5></div>
+                </div>
+                <div class="mediasquare x-twitter">
+                    <div class="logo"><i class="fa-brands fa-x-twitter"></i></div>
+                    <span class="logotext"><h5>X-twitter</h5></div>
+                    </div>
+                <div class="mediasquare instagram">
+                    <div class="logo"><i class="fa-brands fa-instagram"></i></div>
+                    <span class="logotext"><h5>Instagram</h5></div>
+                </div>
+            </div>
+        </div>
 
 
     <script src="script.js"></script>
