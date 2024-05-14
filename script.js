@@ -41,9 +41,49 @@ function alertBox() {
             // Change the color of the bottom square to match the clicked top square
             const colorCode = getComputedStyle(squarebox).getPropertyValue('background-color');
             selection.style.backgroundColor = colorCode;
-            
-            // Display the color code of the selected square
-            // console.log(colorCode);
 
+            // Display the color code of the selected square
+        //document.querySelector('.h3').innerHTML = backgroundColor;
+        //console.log(colorCode);
+        //window.getComputedStyle(document.querySelector(".line1")).getPropertyValue("background-color")
+            //var backgroundColor = window.getComputedStyle(document.querySelector('.line1')).getPropertyValue("background-color");
+            //document.querySelector('.h3').innerHTML = backgroundColor;
+           //h3 = document.querySelector("h3");
+            //window.getComputedStyle(h3).color;
+
+
+        // Récupérez la couleur 
+        const computedColor = window.getComputedStyle(squarebox).backgroundColor;
+
+        console.log(computedColor);
         });
 });
+    //line1.forEach((squarebox) => {
+        //squarebox.addEventListener('click', () => {
+        //const color = getElementById(squareboxes).getPropertyValue('backgroundColor');
+        //selection.querySelector('.h3').innerHTML = color;
+    //});
+
+    //const squareboxes = document.querySelectorAll('.squarebox');
+        //squareboxes.forEach(squarebox) => {
+            //const squareboxClass = squarebox.classList[1]; // Récupère la deuxième classe (ex: "red")
+            //squarebox.style.backgroundColor = colorClass;
+
+   
+
+// exercise 3
+
+function toggleSquare(hello) {
+    // Rétrécir le carré de 10%
+    const currentSize = parseFloat(getComputedStyle(hello).width);
+    const newSize = currentSize * 0.9;
+    hello.style.width = newSize + "px";
+    hello.style.height = newSize + "px";
+
+    // Rotation de 360 degrés
+    hello.style.transform = "rotate(360deg)";
+
+    // Changer la couleur de fond en rouge
+    hello.style.backgroundColor = "red";
+}
+
