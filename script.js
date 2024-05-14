@@ -56,6 +56,11 @@ function alertBox() {
         const computedColor = window.getComputedStyle(squarebox).backgroundColor;
 
         console.log(computedColor);
+
+        function backgroundColor() {
+            document.querySelector('.h3').innerHTML = getPropertyValue("background-color");
+            console.log(getPropertyValue("background-color"));
+        }
         });
 });
     //line1.forEach((squarebox) => {
@@ -73,6 +78,9 @@ function alertBox() {
 
 // exercise 3
 
+
+var i = 1;
+
 function toggleSquare(hello) {
     // Rétrécir le carré de 10%
     const currentSize = parseFloat(getComputedStyle(hello).width);
@@ -85,5 +93,9 @@ function toggleSquare(hello) {
 
     // Changer la couleur de fond en rouge
     hello.style.backgroundColor = "red";
+
 }
+
+
+// exercise 4
 
