@@ -13,6 +13,7 @@
     vertical-align: middle;
     align-items: center;
     gap: 10px;
+    margin: 10px
 
 }
 
@@ -42,10 +43,14 @@ h1:hover {
     display: flex;
     justify-content: center;
     position: relative;
-    margin-top: 100px;
     vertical-align: middle;
     align-items: center;
     gap: 10px;
+    margin: 10px
+}
+
+#squareboxes {
+margin-top: 100px;
 }
 
 .squarebox {
@@ -56,17 +61,7 @@ h1:hover {
     position: relative;
     vertical-align: middle;
     align-items: center;
-}
-
-
-.line1 {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin-top: 100px;
-    vertical-align: middle;
-    align-items: center;
-    margin-top: 100px;
+    transition: background-color 0.3s ease;
 }
 
 .line2 {
@@ -75,7 +70,9 @@ h1:hover {
     position: relative;
     vertical-align: middle;
     align-items: center;
-    margin-top: 10px}
+    margin: 10px
+
+}
 
 .one {
     background-color: red;
@@ -96,3 +93,28 @@ h1:hover {
 .selection {
     background-color: red;
 }
+
+/* Exercise 3 CSS */
+
+.hello {
+    background-color: rgb(41, 182, 123);
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    vertical-align: middle;
+    align-items: center;
+    transition: all 1s ease;
+    
+}
+
+h4 {
+    color: aliceblue;
+}
+
+#foursquares {
+    margin-top: 100px;
+}
+
+/* Exercise 4 CSS */
