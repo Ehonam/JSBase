@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    
+
     <title>JSBase</title>
 </head>
-<body>
-        <!-- Exercice 1 -->
-        <h2>Exercice 1</h2>
 
-    <div id="square" onclick="alertBox()" class="hello">
-        <span><h1><center>Hallo :D</h1></center></span>
+<body>
+    <!-- Exercice 1 -->
+    <h2>Exercice 1</h2>
+    <div id="boite">
+        <div id="square" onclick="alertBox()" class="hello">
+            <span>
+                <h1>
+                    <center>Hallo :D</center>
+                </h1>
+            </span>
+        </div>
     </div>
-        <!-- Exercice 2 -->
-        <h2>Exercice 2</h2>
+    <!-- Exercice 2 -->
+    <h2>Exercice 2</h2>
 
     <div id="squareboxes" onclick="backgroundColor()">
         <div class="line1">
@@ -31,50 +38,111 @@
             </div>
         </div>
     </div>
-        <!-- Exercice 3 -->
-        <h2>Exercice 3</h2>
+    <!-- Exercice 3 -->
+    <h2>Exercice 3</h2>
 
     <div id="foursquares">
         <div class="line1">
             <div class="hello shrunken" onclick="toggleSquare(this)">
-                <span><h4><center>1</h4></center></span>
+                <span>
+                    <h4>
+                        <center>1
+                    </h4>
+                    </center>
+                </span>
             </div>
             <div class="hello shrunken" onclick="toggleSquare(this)"> <!-- onclick="toggleSquare(this)" -->
-                <span><h4><center>2</h4></center></span>
+                <span>
+                    <h4>
+                        <center>2
+                    </h4>
+                    </center>
+                </span>
             </div>
         </div>
         <div class="line1">
             <div class="hello shrunken" onclick="toggleSquare(this)"> <!-- onclick="toggleSquare(this)" -->
-                <span><h4><center>3</h4></center></span>
+                <span>
+                    <h4>
+                        <center>3
+                    </h4>
+                    </center>
+                </span>
             </div>
             <div class="hello shrunken" onclick="toggleSquare(this)"> <!-- onclick="toggleSquare(this)" -->
-                <span><h4><center>4</h4></center></span>
+                <span>
+                    <h4>
+                        <center>4
+                    </h4>
+                    </center>
+                </span>
             </div>
         </div>
     </div>
 
-        <!-- Exercice 4 -->
-        <h2>Exercice 4</h2>
+    <!-- Exercice 4 -->
+    <h2>Exercice 4</h2>
 
-        <div id="socialmedia">
-            <span class="follow"><h1><center>Follow Us</h1></center></span><br>
+    <div id="socialmedia">
+        <div class="line">
+
+            <span class="follow">
+                <h1>
+                    <center>Follow Us</center>
+                </h1>
+            </span>
+
+        </div>
+
+        <div class="line4">
+
             <div id="mediasquares">
                 <div class="mediasquare facebook">
                     <div class="logo"><i class="fa-brands fa-facebook"></i></div>
-                    <span class="logotext"><h5>Facebook</h5></div>
+                    <!--<span class="logotext">
+                        <h5>Facebook</h5>
+                    </span>-->
                 </div>
                 <div class="mediasquare x-twitter">
                     <div class="logo"><i class="fa-brands fa-x-twitter"></i></div>
-                    <span class="logotext"><h5>X-twitter</h5></div>
-                    </div>
+                    <!-- <span class="logotext">
+                        <h5>X-twitter</h5>
+                    </span> -->
+                </div>
                 <div class="mediasquare instagram">
                     <div class="logo"><i class="fa-brands fa-instagram"></i></div>
-                    <span class="logotext"><h5>Instagram</h5></div>
+                    <!-- <span class="logotext">
+                        <h5>Instagram</h5>
+                    </span> -->
                 </div>
             </div>
+
         </div>
+    </div>
 
+    <!-- Exercice 5 -->
+    <h2>Exercice 5</h2>
 
+    <div id="five">
+        <div class="figure">
+            <div class="square5">
+                <span class="line5">
+                    <h1>
+                        <center><b>Valeur en euros</b></center>
+                    </h1>
+                </span>
+                <span class="line5">
+                    <center><input type="number"></center>
+                </span>
+                <span class="line5">
+                    <p>
+                        <center><b> francs</b></center>
+                    </p>
+                </span>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
