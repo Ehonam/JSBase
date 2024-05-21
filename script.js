@@ -98,3 +98,26 @@ function toggleSquare(hello) {
 
 
 // exercise 4
+
+
+// Get all the three squares
+const line4 = document.querySelectorAll('.mediasquare');
+
+// Get the background  
+const socialmedia = document.querySelector('.socialmedia');
+
+// Add click event listeners to each top square
+line4.forEach((mediasquare) => {
+    mediasquare.addEventListener('click', () => {
+        // Change the color of the background to match the three squares
+        const colorCode = getComputedStyle(mediasquare).getPropertyValue('background-color');
+        socialmedia.style.backgroundColor = colorCode;
+
+
+        // Récupérez la couleur 
+        const computedColor = window.getComputedStyle(mediasquare).backgroundColor;
+
+        console.log(computedColor);
+
+    });
+});
