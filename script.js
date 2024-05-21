@@ -106,7 +106,7 @@ const line4 = document.querySelectorAll('.mediasquare');
 // Get the background  
 const socialmedia = document.querySelector('.socialmedia');
 
-// Add click event listeners to each top square
+// Add click event listeners to each three squares
 line4.forEach((mediasquare) => {
     mediasquare.addEventListener('click', () => {
         // Change the color of the background to match the three squares
