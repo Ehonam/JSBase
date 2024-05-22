@@ -106,6 +106,10 @@ h1:hover {
     background-color: red;
 }
 
+.selection h3 {
+    color: black;
+}
+
 /* Exercise 3 CSS */
 
 .hello {
@@ -135,11 +139,16 @@ h4 {
     position: relative;
 }
 
+.red {
+    background-color: rgb(189, 50, 50);
+    transform: rotate(360deg) scale(1.1);
+    transition: all 1s ease;
+}
 
 
 /* Exercise 4 CSS */
 
-#socialmedia {
+.socialmedia {
     padding-top: 10%;
     padding-bottom: 10%;
     height: 100vh;
@@ -184,10 +193,6 @@ h4 {
     transition: all 1s ease;
 }
 
-.mediasquare:hover {
-    transition: all 1s ease;
-}
-
 
 .line4 {
     display: flex;
@@ -207,6 +212,8 @@ h4 {
     align-items: center;
     font-size: 50px;
     color: #ffffff;
+    margin-bottom: 5px;
+
 }
 
 .logo:hover {
@@ -224,6 +231,7 @@ h4 {
     vertical-align: middle;
     align-items: center;
     flex-direction: column;
+   
 }
 
 .facebook:hover {
@@ -242,8 +250,7 @@ h4 {
     vertical-align: middle;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
-    margin: 10px
+
 }
 
 .x-twitter:hover {
@@ -262,8 +269,7 @@ h4 {
     vertical-align: middle;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
-    margin: 10px
+
 }
 
 .instagram:hover {
@@ -280,13 +286,16 @@ h4 {
     position: relative;
     vertical-align: middle;
     align-items: center;
-    font-size: 50px;
+    font-size: 37px;
     color: #ffffff;
+    opacity: 0;
 }
 
 .logotext:hover {
     /* reproduction de l'effet de clic */
     transition: all 1s ease;
+    opacity: 1;
+
 }
 
 h5 {
@@ -294,6 +303,43 @@ h5 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30%;
     font-weight: 100;
+    margin-bottom: -25px;
+
+}
+
+.effect { /* regroupement des effets que je souhaite voir s'exécuter au clic */
+    .logo {
+        /* reproduction de l'effet de clic */
+        transition: all 1s ease;
+        transform: rotate(360deg);
+        translate: 0% -35%;
+    }
+    .instagram {
+        /* reproduction de l'effet de clic */
+        background-color: rgb(131, 58, 180);
+        border-radius: 10%;
+        box-shadow: 0px 12px 20px rgba(41, 39, 39, 0.8);
+        transform: scale(1.1);
+    }
+    .x-twitter {
+        /* reproduction de l'effet de clic */
+        background-color: rgb(78, 120, 148);
+        border-radius: 10%;
+        box-shadow: 0px 12px 20px rgba(41, 39, 39, 0.8);
+        transform: scale(1.1);
+    }
+    .facebook {
+        background-color: rgb(37, 100, 136);
+        border-radius: 10%;
+        box-shadow: 0px 12px 20px rgba(41, 39, 39, 0.8);
+        transform: scale(1.1);
+    }
+    .logotext {
+        /* reproduction de l'effet de clic */
+        transition: all 1s ease;
+        opacity: 1;
+    
+    }
 }
 
 
@@ -307,6 +353,7 @@ h5 {
     flex-direction: column;
     height: 100vh;
     position: relative;
+    
 }
 
 .figure {
@@ -329,24 +376,12 @@ h5 {
     height: 400px;
     width: 400px;
     background-color: rgb(141, 148, 145);
-    opacity: 0.7;
+    opacity: 0.86;
     justify-content: center;
-    position: relative;
     vertical-align: middle;
     align-items: center;
     transition: background-color 0.3s ease;
     background-color: rgba(110, 107, 107, 0.5);
-    backdrop-filter: blur(150px);
-}
-
-h6 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
-    color: azure;
-    text-align: center;
-    justify-content: center;
-    position: absolute;
-    vertical-align: middle;
-    display: flex;
-    flex-direction: column;
+    backdrop-filter: blur(250px);
+    padding-top: 190px;
 }
