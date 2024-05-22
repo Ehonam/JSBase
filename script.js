@@ -34,6 +34,7 @@ const line1 = document.querySelectorAll('.squarebox');
 
 // Get the bottom square
 const selection = document.querySelector('.selection');
+const maCouleur = document.querySelector('.maCouleur');
 
 // Add click event listeners to each top square
 line1.forEach((squarebox) => {
@@ -41,6 +42,7 @@ line1.forEach((squarebox) => {
         // Change the color of the bottom square to match the clicked top square
         const colorCode = getComputedStyle(squarebox).getPropertyValue('background-color');
         selection.style.backgroundColor = colorCode;
+        maCouleur.innerHTML = colorCode
 
         // Display the color code of the selected square
         //document.querySelector('.h3').innerHTML = backgroundColor;
@@ -52,15 +54,15 @@ line1.forEach((squarebox) => {
         //window.getComputedStyle(h3).color;
 
 
-        // Récupérez la couleur 
-        const computedColor = window.getComputedStyle(squarebox).backgroundColor;
+        // // Récupérez la couleur 
+        // const computedColor = window.getComputedStyle(squarebox).backgroundColor;
 
-        console.log(computedColor);
+        // console.log(computedColor);
 
-        function backgroundColor() {
-            document.querySelector('.h3').innerHTML = getPropertyValue("background-color");
-            console.log(getPropertyValue("background-color"));
-        }
+        // function backgroundColor() {
+        //     document.querySelector('.h3').innerHTML = getPropertyValue("background-color");
+        //     console.log(getPropertyValue("background-color"));
+        // }
     });
 });
 //line1.forEach((squarebox) => {
@@ -79,27 +81,28 @@ line1.forEach((squarebox) => {
 // exercise 3
 
 
-var i = 1;
+const hellos = document.querySelectorAll('.hello');
 
-function toggleSquare(hello) {
-    // Rétrécir le carré de 10%
-    const currentSize = parseFloat(getComputedStyle(hello).width);
-    const newSize = currentSize * 0.9;
-    hello.style.width = newSize + "px";
-    hello.style.height = newSize + "px";
-
-    // Rotation de 360 degrés
-    hello.style.transform = "rotate(360deg)";
-
-    // Changer la couleur de fond en rouge
-    hello.style.backgroundColor = "red";
-
-}
+hellos.forEach((hello) => {
+    hello.addEventListener("click", () => {
+        hello.classList.toggle("red")
+    })
+})
 
 
 // exercise 4
 
 
+// toggle css .effect sur les mediasquare
+const mediasquare = document.querySelectorAll('.mediasquare');
+
+mediasquare.forEach((mediasquare) => {
+    mediasquare.addEventListener("click", () => {
+        mediasquare.classList.toggle("effect")
+    })
+})
+
+// changements de couleurs du fond
 // Get all the three squares
 const line4 = document.querySelectorAll('.mediasquare');
 
@@ -120,4 +123,21 @@ line4.forEach((mediasquare) => {
         console.log(computedColor);
 
     });
+});
+
+
+// exercise 5
+
+
+const euroInput = document.getElementById('euro-input');
+const francInput = document.getElementById('franc-input');
+
+euroInput.addEventListener('input', () => {
+  const euroValue = parseFloat(euroInput.value);
+  if (isNaN(euroValue)) {
+    francInput.value = 'Veuillez saisir une valeur numérique';
+  } else {
+    const francValue = euroValue * 6.55957;
+    francInput.value = francValue.toFixed(2);
+  }
 });
