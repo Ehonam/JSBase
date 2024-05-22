@@ -385,3 +385,16 @@ h5 {
     backdrop-filter: blur(250px);
     padding-top: 190px;
 }
+
+#euroInput {
+    width: 250px;
+    height: 30px;
+    font-size: 2em;
+    text-align: end;    
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    backdrop-filter: blur(250px);
+}
