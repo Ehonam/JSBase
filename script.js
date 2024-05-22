@@ -92,38 +92,33 @@ hellos.forEach((hello) => {
 
 // exercise 4
 
+/* L’évènement DOMContentLoaded est émis lorsque le document HTML initial a été complètement chargé et analysé, sans attendre que les feuilles de style, images et sous-documents aient terminé de charger. */
+window.addEventListener("DOMContentLoaded", () => {
+    
+    // on cible tous les éléments qui ont comme classe "carre" (attention au point)
+    const carres = document.querySelectorAll(".carre")
+    // on cible le section 
+    const section = document.querySelector("section")
+    
+    // on boucle sur tous les éléments de classe "carre"
+    carres.forEach(carre => {
+        // quand on clique sur un de ces élément
+        carre.addEventListener("click", function() {
+            // on ajoute (ou on enlève la classe "active")
+            carre.classList.toggle("active")
 
-// toggle css .effect sur les mediasquare
-const mediasquare = document.querySelectorAll('.mediasquare');
-
-mediasquare.forEach((mediasquare) => {
-    mediasquare.addEventListener("click", () => {
-        mediasquare.classList.toggle("effect")
+            // si l'élément ne contient PAS (!) la classe "active"
+            if(!carre.classList.contains("active")){
+                // la couleur du section est grise
+                section.style.backgroundColor = "rgb(192, 192, 192)"
+            } else {
+                // sinon on récupère la couleur définie dans le data-color du HTML (data-color="#....")
+                section.style.backgroundColor = carre.dataset.color
+            }
+        })
     })
 })
 
-// changements de couleurs du fond
-// Get all the three squares
-const line4 = document.querySelectorAll('.mediasquare');
-
-// Get the background  
-const socialmedia = document.querySelector('.socialmedia');
-
-// Add click event listeners to each three squares
-line4.forEach((mediasquare) => {
-    mediasquare.addEventListener('click', () => {
-        // Change the color of the background to match the three squares
-        const colorCode = getComputedStyle(mediasquare).getPropertyValue('background-color');
-        socialmedia.style.backgroundColor = colorCode;
-
-
-        // Récupérez la couleur 
-        const computedColor = window.getComputedStyle(mediasquare).backgroundColor;
-
-        console.log(computedColor);
-
-    });
-});
 
 
 // exercise 5
