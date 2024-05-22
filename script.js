@@ -128,16 +128,28 @@ line4.forEach((mediasquare) => {
 
 // exercise 5
 
+const euroToFrancsRate = 6.55957;
 
-const euroInput = document.getElementById('euro-input');
-const francInput = document.getElementById('franc-input');
+function convertEuroToFrancs(euro) {
+    return (euro * euroToFrancsRate).toFixed(2);
+}
+
+const euroInput = document.getElementById('euroInput');
+const resultElement = document.getElementById('result');
 
 euroInput.addEventListener('input', () => {
-  const euroValue = parseFloat(euroInput.value);
-  if (isNaN(euroValue)) {
-    francInput.value = 'Veuillez saisir une valeur numérique';
-  } else {
-    const francValue = euroValue * 6.55957;
-    francInput.value = francValue.toFixed(2);
-  }
+    const euroValue = parseFloat(euroInput.value);
+    if (!isNaN(euroValue)) {
+        const francsValue = convertEuroToFrancs(euroValue);
+        resultElement.textContent = `${francsValue} francs`;
+    } else {
+        resultElement.textContent = 'Veuillez saisir une valeur numérique.';
+    }
 });
+
+
+
+
+
+    
+ 
